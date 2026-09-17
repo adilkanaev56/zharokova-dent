@@ -771,7 +771,7 @@ if (phone) waLines.push('Телефон: ' + phone);
 if (date) waLines.push('Удобная дата: ' + date);
 if (service) waLines.push('Услуга: ' + service);
 var waText = encodeURIComponent(waLines.join(String.fromCharCode(10)));
-window.open('https://wa.me/77076936633?text=' + waText, '_blank');
+var waLink = 'https://wa.me/77076936633?text=' + waText; setTimeout(function(){ window.location.href = waLink; }, 600);
     this.classList.add('hidden-after-submit');
     document.getElementById('confirmMsg').classList.add('show');
   });
