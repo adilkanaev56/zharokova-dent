@@ -171,9 +171,13 @@
     gap: 48px;
     align-items: center;
   }
-  .eyebrow-line {
+.hero-content {
+    text-align: center;
+  }
+    .eyebrow-line {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     color: var(--teal);
     font-size: 0.92rem;
@@ -185,9 +189,10 @@
     font-size: clamp(2.3rem, 4.4vw, 3.6rem);
     line-height: 1.06;
     max-width: 14ch;
+    margin: 0 auto;
   }
   .hero-sub {
-        margin-top: 30px; margin-left: 2cm;
+            margin-top: 30px; margin-left: auto; margin-right: auto;
     font-size: 1.1rem;
     color: var(--ink-soft);
     max-width: 46ch;
@@ -197,12 +202,14 @@
     gap: 14px;
     margin-top: 32px;
     flex-wrap: wrap;
+    justify-content: center;
   }
   .hero-stats {
     display: flex;
     gap: 32px;
     margin-top: 44px;
     flex-wrap: wrap;
+    justify-content: center;
   }
   .stat b {
     display: block;
@@ -433,7 +440,7 @@
 
   <section class="hero" style="border-top:none; padding-top: 56px;">
     <div class="wrap" style="display:contents;">
-      <div>
+            <div class="hero-content">
         <div class="eyebrow-line">
           <svg viewBox="0 0 24 24" fill="none"><path d="M12 3l2.2 4.5L19 8.3l-3.5 3.4.8 4.8L12 14.2 7.7 16.5l.8-4.8L5 8.3l4.8-.8L12 3z" fill="currentColor"/></svg>
           Стоматология в Алматы
