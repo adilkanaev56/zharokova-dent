@@ -761,6 +761,17 @@
 <script>
   document.getElementById('bookForm').addEventListener('submit', function(e){
     e.preventDefault();
+var name = document.getElementById('name').value.trim();
+var phone = document.getElementById('phone').value.trim();
+var date = document.getElementById('date').value;
+var service = document.getElementById('service').value;
+var waLines = ['Заявка с сайта Zharokova Dent:'];
+if (name) waLines.push('Имя: ' + name);
+if (phone) waLines.push('Телефон: ' + phone);
+if (date) waLines.push('Удобная дата: ' + date);
+if (service) waLines.push('Услуга: ' + service);
+var waText = encodeURIComponent(waLines.join(String.fromCharCode(10)));
+window.open('https://wa.me/77076936633?text=' + waText, '_blank');
     this.classList.add('hidden-after-submit');
     document.getElementById('confirmMsg').classList.add('show');
   });
